@@ -65,7 +65,7 @@ public class MusalaTest extends TestBase {
 		companyPg.switchTab();
 		Actual=companyPg.getCurrentPageURL();
 		System.out.println(Actual);
-	    Expected="https://www.facebook.com/MusalaSoft?fref=ts";
+	    Expected="facebook.com/MusalaSoft?fref=ts";
 		Assert.assertEquals(Actual.contains(Expected), true,"Wrong facebook link redirection");
 		Assert.assertEquals(companyPg.facebookProfilePicDisplayed(), true,"Facebook muslaa profile pic not displayed");
 	}
