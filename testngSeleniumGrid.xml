@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+<listeners>
+<listener class-name="commonFunctions.TestListenersSeleniumGrid"></listener>
+</listeners>
+  <test  name="testChrome">
+  <parameter  name="browser" value="firefox"/>
+    <classes>
+      <class name="tests.MusalaTestSeleniumGrid">
+       <methods>
+      <include name="checkOpenPositions"/>
+    </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+    <test  name="testFirefox">
+  <parameter  name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.MusalaTestSeleniumGrid">
+       <methods>
+      <include name="checkOpenPositions"/>
+    </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
