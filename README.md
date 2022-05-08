@@ -35,5 +35,8 @@ Download maven
 *Screenshot path is "Project path\screenshots"
 
 
+*Execute using command : mvn test -Dtestng=File of testng you want to run
+
+
 
 
