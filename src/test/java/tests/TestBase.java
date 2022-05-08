@@ -30,6 +30,7 @@ public abstract class TestBase {
     	case "firefox":
     		WebDriverManager.firefoxdriver().setup();
     		driver=new FirefoxDriver();
+    		
     	break;
     		
 		default:
