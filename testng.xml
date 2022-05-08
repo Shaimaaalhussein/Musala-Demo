@@ -8,7 +8,7 @@
     <classes>
       <class name="tests.MusalaTest">
        <methods>
-      <include name="facebookCompanyPage"/>
+      <include name="checkOpenPositions"/>
     </methods>
       </class>
     </classes>
