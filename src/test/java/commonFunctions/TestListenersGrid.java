@@ -13,10 +13,10 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import tests.TestBaseSeleniumGrid;
+import tests.TestBaseGrid;
 
 
-public class TestListenersSeleniumGrid implements ITestListener {
+public class TestListenersGrid implements ITestListener {
 
 	private static ExtentReports extent = ExtentManager.getInstance();
 	private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
@@ -32,7 +32,7 @@ public class TestListenersSeleniumGrid implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
 		String logtext = "<b>Test Method" + result.getMethod().getMethodName() + "Successful<b>";
-		WebDriver driver = ((TestBaseSeleniumGrid)result.getInstance()).driver.get();
+		WebDriver driver = ((TestBaseGrid)result.getInstance()).driver.get();
 	    CaptureScreenshot.takeScreenshot(driver, result.getMethod().getMethodName());
 		MarkupHelper.createLabel(logtext, ExtentColor.GREEN);
 		extentTest.get().log(Status.PASS, "Test Case PASSED is " + result.getMethod().getMethodName());
@@ -45,7 +45,7 @@ public class TestListenersSeleniumGrid implements ITestListener {
 			// TODO Auto-generated method stub
 			String MethodName= result.getMethod().getMethodName();
 			
-			WebDriver driver = ((TestBaseSeleniumGrid)result.getInstance()).driver.get();
+			WebDriver driver = ((TestBaseGrid)result.getInstance()).driver.get();
 			
 			String path = CaptureScreenshot.takeScreenshot(driver, result.getMethod().getMethodName());
 			String logText = "<b>Test Method " + MethodName + " Failed</b>";
@@ -63,7 +63,7 @@ public class TestListenersSeleniumGrid implements ITestListener {
 
 		public void onTestSkipped(ITestResult result) {
 			// TODO Auto-generated method stub
-            WebDriver driver = ((TestBaseSeleniumGrid)result.getInstance()).driver.get();
+            WebDriver driver = ((TestBaseGrid)result.getInstance()).driver.get();
 			
 			String path = CaptureScreenshot.takeScreenshot(driver, result.getMethod().getMethodName());
 			String logtext = "<b>Test Method" + result.getMethod().getMethodName() + "Skipped<b>";

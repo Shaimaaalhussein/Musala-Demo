@@ -9,7 +9,7 @@ import pageClasses.CompanyPage;
 import pageClasses.HomePage;
 
 
-public class MusalaTestSeleniumGrid extends TestBaseSeleniumGrid {
+public class MusalaTestGrid extends TestBaseGrid {
 
 	
     HomePage homePg;
