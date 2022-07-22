@@ -58,6 +58,44 @@ public class TestListeners implements ITestListener {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
+			 boolean islogIssue = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(JiraCreateIssue.class).isCreateIssue();
+
+		        if (islogIssue) {
+
+		//Provide proper Jira project URL ex: https://browsertack.atlassian.net 
+
+		//Jira User name ex: browserstack@gmail.com
+
+		//API token copy from Jira dashboard ex: lorelimpusm12uijk
+
+		//Project key should be, Short name ex: BS
+
+
+		            JiraServiceProvider JiraServiceProvider = new JiraServiceProvider("https://shaimaa.atlassian.net",
+
+		                    "shaimaaelhosen1@gmail.com", "SlQyRlynkFugLDupJsdz7F11", "SWJ");
+
+
+
+		            String issueDescription = "Failure Reason from Automation Testing\n\n" + result.getThrowable().getMessage()
+
+		                    + "\n";
+
+		            issueDescription.concat(ExceptionUtils.getFullStackTrace(result.getThrowable()));
+
+
+
+
+		            String issueSummary = result.getMethod().getConstructorOrMethod().getMethod().getName()
+
+		                    + " Failed in Automation Testing";
+
+		            
+
+		            JiraServiceProvider.createJiraIssue("Bug", issueSummary, issueDescription, "Automated Testing",path);
+		        }
+
 		}
 	
 
