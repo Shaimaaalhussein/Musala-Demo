@@ -7,7 +7,7 @@ import commonFunctions.DataProviderSource;
 import pageClasses.CareerPage;
 import pageClasses.CompanyPage;
 import pageClasses.HomePage;
-
+import commonFunctions.JiraCreateIssue;
 
 public class MusalaTest extends TestBase {
 
