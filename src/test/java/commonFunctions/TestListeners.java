@@ -2,7 +2,7 @@ package commonFunctions;
 
 
 import java.io.IOException;
-
+import org.apache.commons.lang.exception.ExceptionUtils;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -93,7 +93,7 @@ public class TestListeners implements ITestListener {
 
 		            
 
-		            JiraServiceProvider.createJiraIssue("Bug", issueSummary, issueDescription, "Automated Testing",path);
+		            JiraServiceProvider.createJiraIssue("Bug", issueSummary, issueDescription, "Automated Testing");
 		        }
 
 		}
