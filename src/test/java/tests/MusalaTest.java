@@ -102,6 +102,7 @@ public void applyForPosition() throws InterruptedException {
 	Assert.assertEquals(Actual, Expected,"Wrong mobile validation message");
 	
 }
+@JiraCreateIssue(isCreateIssue=true)
 @Test(description ="Check open positions for Sofia and Skopje",priority = 1)
 
 
