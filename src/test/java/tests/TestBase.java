@@ -23,13 +23,15 @@ public abstract class TestBase {
         switch(browserType) {
     	
     	case "chrome":
-    		WebDriverManager.chromedriver().setup();
-    	    driver= new ChromeDriver();
+    		ChromeOptions options = new ChromeOptions().setHeadless(true);
+    		WebDriverManager.chromedriver().driverVersion("103.0.5060.134").setup();
+    	    driver= new ChromeDriver(options);
 		break;
 		
     	case "firefox":
+    		FirefoxOptions optionsF=new FirefoxOptions().setHeadless(true);
     		WebDriverManager.firefoxdriver().setup();
-    		driver=new FirefoxDriver();
+    		driver=new FirefoxDriver(optionsF);
     		
     	break;
     		
