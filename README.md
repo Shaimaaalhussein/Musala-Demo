@@ -37,6 +37,11 @@ Download maven
 
 *Execute using command : mvn test -Dtestng=File of testng you want to run
 
+## Docker 
+***
+* Create docker image using this "docker build -t=selenium/docker ."
+* Run docker image using this "docker run -it selenium/docker mvn test -Dtestng=testng"
+
 
 
 
