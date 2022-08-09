@@ -52,4 +52,8 @@ public abstract class TestBase {
 	public void afterClass() {
 	
 	}
+	@AfterSuite
+	public void afterSuite() {
+		SendingMail.sendEmail();
+	}
 }
