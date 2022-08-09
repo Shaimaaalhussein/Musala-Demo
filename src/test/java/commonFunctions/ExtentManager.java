@@ -16,7 +16,7 @@ public class ExtentManager {
 
 		
 		String FileName = "Release"+".html";
-		String directory = configFileReader.getReportFilePath();
+		String directory =System.getProperty("user.dir") + "/reports/";
 		new File(directory).mkdirs();
 		String FullPath = directory + FileName;
 		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(FullPath);
