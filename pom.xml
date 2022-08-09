@@ -76,7 +76,11 @@
             <version>${webdrivermanager.version}</version>
         </dependency>
         <!-- Extent report -->
-    
+    <dependency>
+    <groupId>com.sun.mail</groupId>
+    <artifactId>javax.mail</artifactId>
+    <version>1.6.2</version>
+</dependency>
     <!-- https://mvnrepository.com/artifact/net.rcarz/jira-client -->
 		<dependency>
 			<groupId>net.rcarz</groupId>
